@@ -8,7 +8,7 @@ var PasswordForm = React.createClass({displayName: "PasswordForm",
     },
 
     componentWillMount: function () {
-        this.changeLabelNewPass = debounce(function (error) {
+        this.changeLabelNewPass = _.debounce(function (error) {
             var className = classNames({'form-group': true,
                                         'has-error': error})
             this.setState({ labelNewPass: error,
